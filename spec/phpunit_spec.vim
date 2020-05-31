@@ -98,7 +98,7 @@ describe "PHPUnit"
     Expect g:test#last_command == 'php artisan test --colors NormalTest.php'
   end
 
-  describe "when paratest installed in vendor/bin"
+  describe "when paratest is installed in vendor/bin"
 
     before
       !touch vendor/bin/paratest
