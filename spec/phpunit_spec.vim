@@ -104,7 +104,7 @@ describe "PHPUnit"
       !touch vendor/bin/paratest
     end
 
-    it "uses paratest for TestFile"
+    it "executes paratest for TestFile"
       !touch vendor/bin/paratest
       view NormalTest.php
       TestFile
@@ -112,15 +112,14 @@ describe "PHPUnit"
       Expect g:test#last_command == './vendor/bin/paratest --colors NormalTest.php'
     end
 
-
-    it "uses paratest for TestSuite"
+    it "executes paratest for TestSuite"
       view NormalTest.php
       TestSuite
 
       Expect g:test#last_command == './vendor/bin/paratest --colors'
     end
 
-    it "runs paratest in functional mode for TestNearest with --filter"
+    it "executes paratest in functional mode for TestNearest with --filter"
       view +1 NormalTest.php
       TestNearest
 
